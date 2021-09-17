@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../../assets/Fonts/Poppins-Medium.ttf);
+}
+.DashboardTabs {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 2rem !important;
+}
+
+.DashboardTabs-Social,
+.DashboardTabs-Business {
+  width: 50%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  cursor: pointer;
+}
+.DashboardTabs-Business a,
+.DashboardTabs-Social a {
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  margin: 0 !important;
+  font-family: "Poppins-SemiBold";
+}
+.DashboardTabs-Social a {
+  text-align: right;
+  padding-right: 7rem !important;
+}
+.DashboardTabs-Business a {
+  padding-left: 7rem;
+}
+.DashboardTabs-Social {
+  display: flex;
+  justify-content: flex-end;
+}
+.DashboardTabs-active,
+.DashboardTabs-inactive {
+  border: none !important;
+  border-radius: 0 !important;
+}
+.DashboardTabs-active {
+  border-bottom: 2px solid #000 !important;
+}
+.DashboardTabs-active,
+.DashboardTabs-active a {
+  background-color: #8da2af !important;
+  color: #fff !important;
+}
+.DashboardTabs-inactive,
+.DashboardTabs-inactive a {
+  background-color: #000 !important;
+  color: gray !important;
+}
+.DashboardTabs-TabContent {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 3rem;
+}
+.DashboardTabs-AddButton {
+  border-radius: 20px;
+  width: 8rem;
+  height: 8rem;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins-Medium";
+  transition: 1s;
+}
+.DashboardTabs-AddButton:hover {
+  transform: scale(1.1);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .DashboardTabs-Social a {
+    padding-right: 3rem !important;
+  }
+  .DashboardTabs-Business a {
+    padding-left: 3rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

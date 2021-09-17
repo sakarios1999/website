@@ -1,0 +1,48 @@
+{
+    "data": {
+        "Features": [
+            {
+                "id": 1,
+                "text": "Contactless Communication",
+                "name": "Communication"
+            },
+            {
+                "id": 2,
+                "text": "Instant Accessibility",
+                "name": "Access"
+            },
+            {
+                "id": 3,
+                "text": "Secured Networking",
+                "name": "Secure"
+            },
+            {
+                "id": 4,
+                "text": "Convenient Sharing",
+                "name": "Sharing"
+            },
+            {
+                "id": 5,
+                "text": "Efficient Optimization",
+                "name": "Optimization"
+            }
+        ],
+        "Products": [
+            {
+                "id": 1,
+                "text": "TYC Cards",
+                "name": "Cards"
+            },
+            {
+                "id": 2,
+                "text": "TYC Chips",
+                "name": "Chips"
+            },
+            {
+                "id": 3,
+                "text": "TYC Phone Cases",
+                "name": "PhoneCases"
+            }
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(../../assets/Fonts/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../../assets/Fonts/Poppins-Light.ttf);
+}
+.Support {
+  padding: 4rem 2rem;
+}
+.Support-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins-Black";
+}
+.Support-Header p {
+  margin: 0;
+  font-family: "Poppins-Light";
+}
+.Support-Header p span {
+  color: rgb(211, 0, 214);
+}
+.Support-TutorialSection {
+  margin-top: 4rem;
+}
+.Support-VideoTutorial {
+  margin: 0;
+  height: 280px;
+  padding: 0.5rem;
+}
+.Support-VideoTutorial p {
+  margin: 0.3rem 0rem;
+  font-family: "Poppins-Light";
+}
+
+.Support-FAQ {
+  margin: 3rem 0rem 4rem;
+}

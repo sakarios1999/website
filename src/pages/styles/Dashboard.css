@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../assets/Fonts/Poppins-Medium.ttf);
+}
+.Dashboard {
+  padding: 4rem 0rem;
+}
+.Dashboard-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Dashboard-ProfilePic {
+  border-radius: 20px;
+  width: 10rem;
+  height: 10rem;
+}
+.Dashboard-Username {
+  font-family: "Poppins-Bold";
+  margin-top: 1rem;
+}
+.Dashboard-ProfileLink {
+  color: rgb(211, 0, 214);
+  font-family: "Poppins-Medium";
+}
+.Dashboard-DirectSwitch {
+  font-family: "Poppins-SemiBold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 10rem;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.Dashboard-DirectSwitch__off {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+}
+.Dashboard-DirectSwitch__off:hover {
+  color: #fff;
+  background-color: rgb(61, 61, 61);
+  border: 1px solid rgb(61, 61, 61);
+}
+.Dashboard-DirectSwitch__on {
+  color: #fff;
+  background-color: rgb(211, 0, 214);
+  border: 1px solid rgb(211, 0, 214);
+}
+.Dashboard-DirectSwitch__on:hover {
+  color: #fff;
+  background-color: rgb(177, 0, 180);
+  border: 1px solid rgb(177, 0, 180);
+}
+
+.Dashboard-EditProfile {
+  font-family: "Poppins-SemiBold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 10rem;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #8da2af;
+  color: #fff;
+  margin-top: 1rem;
+}
+.Dashboard-EditProfile:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #628092;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Dashboard {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /15rem 58% no-repeat,
+      rgb(245, 245, 245);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .Dashboard {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

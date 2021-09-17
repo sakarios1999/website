@@ -1,0 +1,13 @@
+.PriceCard {
+  border: 1px solid #000;
+  margin-top: 200px;
+  padding: 2rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.PriceCard-Section {
+  display: flex;
+  justify-content: space-between;
+}
