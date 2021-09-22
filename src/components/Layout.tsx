@@ -8,11 +8,14 @@ export default class Layout extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavbarComponent />
+        <div className="Layout-Navbar">
+          <NavbarComponent />
+        </div>
 
-        <main className="main-content">{this.props.children}</main>
-
-        <Footer />
+        <main className="Layout-content">{this.props.children}</main>
+        <div className="Layout-Footer">
+          <Footer />
+        </div>
       </React.Fragment>
     );
   }

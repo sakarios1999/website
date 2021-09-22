@@ -1,43 +1,51 @@
 import React from "react";
-import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
+import { GoSignOut } from "react-icons/go";
+import { BiTransfer } from "react-icons/bi";
+import { ImStatsDots } from "react-icons/im";
+import { RiPriceTagFill } from "react-icons/ri";
 
 export const SidebarData = [
   {
-    title: "Home",
+    title: "Locations (User History)",
+    path: "/Locations",
+    icon: <AiIcons.AiFillCompass />,
+    cName: "Sidebar-text",
+  },
+  {
+    title: "User Transactions",
+    path: "/Transactions",
+    icon: <BiTransfer />,
+    cName: "Sidebar-text",
+  },
+  {
+    title: "Activate Tag",
+    path: "/ActivateTag",
+    icon: <RiPriceTagFill />,
+    cName: "Sidebar-text",
+  },
+  {
+    title: "My QR Code",
+    path: "/QRCode",
+    icon: <AiIcons.AiOutlineQrcode />,
+    cName: "Sidebar-text",
+  },
+  {
+    title: "Analytics",
+    path: "/Analytics",
+    icon: <ImStatsDots />,
+    cName: "Sidebar-text",
+  },
+  {
+    title: "Settings",
+    path: "/Settings",
+    icon: <AiIcons.AiFillSetting />,
+    cName: "Sidebar-text",
+  },
+  {
+    title: "Logout",
     path: "/",
-    icon: <AiIcons.AiFillHome />,
-    cName: "nav-text",
-  },
-  {
-    title: "Reports",
-    path: "/reports",
-    icon: <IoIcons.IoIosPaper />,
-    cName: "nav-text",
-  },
-  {
-    title: "Products",
-    path: "/products",
-    icon: <FaIcons.FaCartPlus />,
-    cName: "nav-text",
-  },
-  {
-    title: "Team",
-    path: "/team",
-    icon: <IoIcons.IoMdPeople />,
-    cName: "nav-text",
-  },
-  {
-    title: "Messages",
-    path: "/messages",
-    icon: <FaIcons.FaEnvelopeOpenText />,
-    cName: "nav-text",
-  },
-  {
-    title: "Support",
-    path: "/support",
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: "nav-text",
+    icon: <GoSignOut />,
+    cName: "Sidebar-text",
   },
 ];

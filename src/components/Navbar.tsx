@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { IconContext } from "react-icons";
-import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { BiCartAlt } from "react-icons/bi";
 import {
-  FaBars,
+  FaFacebook,
   FaFacebookSquare,
+  FaInstagram,
   FaLinkedin,
+  FaTwitter,
   FaTwitterSquare,
 } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import {
+  Col,
   Collapse,
+  CustomInput,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
@@ -29,11 +33,14 @@ import {
   UncontrolledDropdown,
 } from "reactstrap";
 import styled from "styled-components";
+import ProfilePicLight from "../assets/Images/Profile-Placeholder light.png";
+import ProfilePicDark from "../assets/Images/Profile-Placeholder.png";
 import Hamburger from "../assets/SVGs/Hamburger.svg";
+import SidebarTYCLogo from "../assets/SVGs/Sidebar-TYC-Logo.svg";
 import TYCLogo from "../assets/SVGs/TYCLogo.svg";
 import "./Navbar.css";
-import { SidebarData } from "./SidebarData";
 import NavbarCart from "./NavbarCart/NavbarCart";
+import { SidebarData } from "./SidebarData";
 
 const NavbarComponent = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,6 +87,21 @@ const NavbarComponent = (props: any) => {
     ${isMobile && "transform: scale(2)"};
     border-radius: 2px;
   `;
+  const SideTwitter = styled(FaTwitter)`
+    color: #fff;
+    transform: scale(1.5);
+    margin-left: 1rem;
+  `;
+  const SideInstagram = styled(FaInstagram)`
+    color: #fff;
+    transform: scale(1.5);
+    margin-left: 1rem;
+  `;
+  const SideFacebook = styled(FaFacebook)`
+    color: #fff;
+    transform: scale(1.5);
+    margin-left: 1rem;
+  `;
   const ColoredLine = () => (
     <hr
       style={{
@@ -93,14 +115,107 @@ const NavbarComponent = (props: any) => {
   );
   return (
     <Navbar className="Navbar" color="none" expand="md">
-      <NavbarBrand href="/">
+      <>
+        {" "}
+        <IconContext.Provider value={{ color: "#fff" }}>
+          <div className="Sidebar-btn">
+            <Link to="#" className="Sidebar-menuBars">
+              <img
+                src={ProfilePicDark}
+                onClick={showSidebar}
+                className="Sidebar-toggler__btn"
+              />
+            </Link>
+          </div>{" "}
+          <nav className={sidebar ? "Sidebar-menu active" : "Sidebar-menu"}>
+            <div className="Sidebar-Header">
+              <Col xs={4} className="p-0 Sidebar-Header__Col">
+                <img className="Sidebar-Header__pic" src={ProfilePicLight} />
+              </Col>
+              <Col xs={7} className="Sidebar-Header__ColInfo">
+                <h4 className="Sidebar-Header__username">Username</h4>
+                <p className="Sidebar-Header__accountLink">
+                  tapyourchip.com/Username
+                </p>{" "}
+                <div>
+                  <CustomInput
+                    type="switch"
+                    id="ChipState"
+                    name="ChipState"
+                    className="Sidebar-Header__ChipState"
+                  />
+                  {/* <p className="Sidebar-Header__ChipOff">Chip Off</p>
+                  <p className="Sidebar-Header__ChipOn">Chip On</p> */}
+                </div>
+              </Col>
+            </div>
+            <ul className="Sidebar-menuItems" onClick={showSidebar}>
+              {SidebarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <Link to={item.path}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="Sidebar-Footer">
+              <img
+                className="Sidebar-Footer__Logo"
+                src={SidebarTYCLogo}
+                alt=""
+              />
+              <div className="Sidebar-Footer__SocialFlow">
+                {" "}
+                <NavLink href="/" className="p-0 ">
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      className: "Sidebar-Footer__SocialLink",
+                    }}
+                  >
+                    {" "}
+                    <SideTwitter />
+                  </IconContext.Provider>
+                </NavLink>
+                <NavLink href="/" className="p-0 ">
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      className: "Sidebar-Footer__SocialLink",
+                    }}
+                  >
+                    {" "}
+                    <SideInstagram />
+                  </IconContext.Provider>
+                </NavLink>
+                <NavLink href="/" className="p-0 ">
+                  {" "}
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      className: "Sidebar-Footer__SocialLink",
+                    }}
+                  >
+                    {" "}
+                    <SideFacebook />
+                  </IconContext.Provider>
+                </NavLink>
+              </div>
+            </div>
+          </nav>
+        </IconContext.Provider>
+      </>
+      <NavbarBrand href="/" className="Navbar-Brand__Container">
         <img className="Navbar-Brand" src={TYCLogo} alt="" />
       </NavbarBrand>
       <div className="Navbar-Brand_whiteBackground"></div>
-      <NavbarBrand href="/">
+      <NavbarBrand href="/" className="Navbar-Brand__ContainerMobile">
         <img className="Navbar-Brand_mobile" src={TYCLogo} alt="" />
       </NavbarBrand>
-      <NavbarToggler onClick={toggle} className="mr-2">
+      <NavbarToggler onClick={toggle} className="mr-2 Navbar-Btn__Container">
         <button className="Navbar-Btn">
           <img src={Hamburger} alt="" />
         </button>
@@ -269,37 +384,10 @@ const NavbarComponent = (props: any) => {
           </DropdownMenu>
         </UncontrolledDropdown>{" "}
       </Collapse>
-      {/* <>
-        <IconContext.Provider value={{ color: "#fff" }}>
-          <div className="navbar">
-            <Link to="#" className="menu-bars">
-              <FaBars onClick={showSidebar} />
-            </Link>
-          </div>
-          <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-            <ul className="nav-menu-items" onClick={showSidebar}>
-              <li className="navbar-toggle">
-                <Link to="#" className="menu-bars">
-                  <AiOutlineClose />
-                </Link>
-              </li>
-              {SidebarData.map((item, index) => {
-                return (
-                  <li key={index} className={item.cName}>
-                    <Link to={item.path}>
-                      {item.icon}
-                      <span>{item.title}</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        </IconContext.Provider>
-      </> */}
     </Navbar>
   );
 };
+
 function mapStateToProps(state: any) {
   return {
     Cart: state.CartReducer,

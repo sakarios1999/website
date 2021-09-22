@@ -17,7 +17,7 @@ import {
 } from "../components/FormHelper/validtionhelper";
 import "./styles/SignUp.css";
 const onSubmit = async (values) => {
-  console.log(JSON.stringify(values));
+  window.alert(JSON.stringify(values));
 };
 const PhoneAdapter = ({ input }) => (
   <PhoneInput

@@ -9,6 +9,7 @@ import {
   composeValidators,
   number,
 } from "../components/FormHelper/validtionhelper";
+import history from "../history";
 import "./styles/ConfirmOtp.css";
 
 interface State {
@@ -24,7 +25,7 @@ const onSubmit = async (values) => {
     values.digit5;
   console.log(JSON.stringify(otpNumber));
   setTimeout(() => {
-    window.location.href = "/Profile/Dashboard";
+    history.push("/Welcome");
   }, 1700);
 };
 

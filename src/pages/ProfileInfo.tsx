@@ -45,8 +45,9 @@ export default class ProfileInfo extends Component<Props, State> {
 
   render() {
     const onSubmit = async (values) => {
+      window.alert(JSON.stringify(values));
       console.log(values);
-      window.location.href = "/Profile/Dashboard";
+      history.push("/Profile/Dashboard");
     };
 
     return (

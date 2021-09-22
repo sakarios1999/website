@@ -14,10 +14,11 @@ import {
   email,
   required,
 } from "../components/FormHelper/validtionhelper";
+import history from "../history";
 import "./styles/SignIn.css";
 const onSubmit = async (values) => {
-  console.log(JSON.stringify(values));
-  window.location.href = "/Profile/Dashboard";
+  window.alert(JSON.stringify(values));
+  history.push("/Profile/Dashboard");
 };
 export default class SignIn extends Component {
   render() {

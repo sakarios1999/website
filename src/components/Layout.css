@@ -6,3 +6,8 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
+
+.Layout-content {
+  z-index: 2;
+  overflow: hidden;
+}
