@@ -215,8 +215,10 @@
 }
 .ConfirmOTP-Checmark__Container {
   position: absolute;
-  left: -75%;
-  top: 0%;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -40px;
   width: 100px;
   height: 50px;
 }

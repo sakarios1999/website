@@ -1,0 +1,23 @@
+.CompatibleDevices {
+  padding: 8rem;
+}
+.CompatibleDevices h1 {
+  font-family: "Poppins-Bold";
+  margin-bottom: 4rem;
+}
+.CompatibleDevices-Title {
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+  margin: 2rem 0rem;
+  padding-left: 0.5rem;
+}
+
+.CompatibleDevices-text {
+  font-family: "Poppins-Regular";
+  padding-left: 1rem;
+}
+.CompatibleDevices span {
+  margin: 0rem;
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+}

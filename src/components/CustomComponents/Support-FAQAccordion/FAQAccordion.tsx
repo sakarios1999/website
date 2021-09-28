@@ -10,7 +10,7 @@ const FAQAccordion = (props) => {
   return (
     <div className="FAQAccordion">
       <Button
-        className="FAQAccordion-Button"
+        className={`FAQAccordion-Button ${props.className}`}
         color="primary"
         onClick={toggle}
         style={{ marginBottom: "1rem" }}
@@ -27,8 +27,10 @@ const FAQAccordion = (props) => {
         </div>
       </Button>
       <Collapse isOpen={isOpen}>
-        <Card className="FAQAccordion-Card">
-          <CardBody className="FAQAccordion-CardBody">
+        <Card className={`FAQAccordion-Card ${props.CardClassName}`}>
+          <CardBody
+            className={`FAQAccordion-CardBody ${props.CardBodyClassName}`}
+          >
             {props.CardBody}
           </CardBody>
         </Card>

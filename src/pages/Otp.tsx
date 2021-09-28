@@ -20,7 +20,7 @@ interface Props {}
 const onSubmit = async (values) => {
   console.log(JSON.stringify(values));
   setTimeout(() => {
-    history.push("/SignIn/ConfirmOTP");
+    window.location.href = "/SignIn/ConfirmOTP";
   }, 1100);
 };
 const PhoneAdapter = ({ input }) => (

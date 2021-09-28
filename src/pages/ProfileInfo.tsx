@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { IconContext } from "react-icons";
 import { FaCamera } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
+import { Link } from "react-router-dom";
 import { Col, Container, Row } from "reactstrap";
 import ProfilePic from "../assets/Images/Profile-Placeholder.png";
 import TYCLogo from "../assets/SVGs/TYCLogo.svg";
@@ -13,7 +14,6 @@ import {
   composeValidators,
   required,
 } from "../components/FormHelper/validtionhelper";
-import history from "../history";
 import "./styles/ProfileInfo.css";
 interface State {
   picUrl: any;
@@ -47,7 +47,7 @@ export default class ProfileInfo extends Component<Props, State> {
     const onSubmit = async (values) => {
       window.alert(JSON.stringify(values));
       console.log(values);
-      history.push("/Profile/Dashboard");
+      window.location.href = "/Profile/Dashboard";
     };
 
     return (
@@ -206,7 +206,12 @@ export default class ProfileInfo extends Component<Props, State> {
                       type="checkbox"
                       value="agreed"
                     />{" "}
-                    <p>I agree to the Terms & Conditions</p>
+                    <Link
+                      to="/Terms&Conditions"
+                      className="ProfileInfo-Agreement"
+                    >
+                      I agree to the Terms & Conditions
+                    </Link>
                   </label>
                   <div className="ProfileInfo-Btns">
                     <button

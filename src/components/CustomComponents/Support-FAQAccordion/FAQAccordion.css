@@ -90,6 +90,14 @@
 .FAQAccordion-CardBody {
   font-family: "Poppins-Medium";
 }
+.FAQAccordion-CardBody li {
+  font-family: "Poppins-Medium";
+}
+.FAQAccordion-CardBody ol {
+}
+.FAQAccordion-CardBody img {
+  width: 100%;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

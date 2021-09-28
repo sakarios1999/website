@@ -106,8 +106,19 @@ export default class Footer extends Component {
                         </Link>
                       </li>
                       <li className="Footer-Link__Item">
-                        <Link className="Footer-Link__Item" to="/about">
+                        <Link
+                          className="Footer-Link__Item"
+                          to="/Privacy-Policy"
+                        >
                           Privacy Policy
+                        </Link>
+                      </li>
+                      <li className="Footer-Link__Item">
+                        <Link
+                          className="Footer-Link__Item"
+                          to="/Terms&Conditions"
+                        >
+                          Terms of Use
                         </Link>
                       </li>
                     </ul>

@@ -9,7 +9,6 @@ import {
   composeValidators,
   number,
 } from "../components/FormHelper/validtionhelper";
-import history from "../history";
 import "./styles/ConfirmOtp.css";
 
 interface State {
@@ -25,7 +24,7 @@ const onSubmit = async (values) => {
     values.digit5;
   console.log(JSON.stringify(otpNumber));
   setTimeout(() => {
-    history.push("/Welcome");
+    window.location.href = "/Welcome";
   }, 1700);
 };
 
@@ -203,35 +202,35 @@ export default class ConfirmOtp extends Component<Props, State> {
                       }`}
                     >
                       <FiStar />
-                      <span className="ConfirmOTP-Checmark__Container">
-                        <svg
-                          className={`${
-                            this.state.submitted && "ConfirmOTP-checkmark"
-                          }`}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 52 52"
-                        >
-                          <circle
-                            className={`${
-                              this.state.submitted &&
-                              "ConfirmOTP-checkmark__circle"
-                            }`}
-                            cx="26"
-                            cy="26"
-                            r="25"
-                            fill="none"
-                          />
-                          <path
-                            className={`${
-                              this.state.submitted &&
-                              "ConfirmOTP-checkmark__check"
-                            }`}
-                            fill="none"
-                            d="M14.1 27.2l7.1 7.2 16.7-16.8"
-                          />
-                        </svg>
-                      </span>
                     </div>
+                    <span className="ConfirmOTP-Checmark__Container">
+                      <svg
+                        className={`${
+                          this.state.submitted && "ConfirmOTP-checkmark"
+                        }`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 52 52"
+                      >
+                        <circle
+                          className={`${
+                            this.state.submitted &&
+                            "ConfirmOTP-checkmark__circle"
+                          }`}
+                          cx="26"
+                          cy="26"
+                          r="25"
+                          fill="none"
+                        />
+                        <path
+                          className={`${
+                            this.state.submitted &&
+                            "ConfirmOTP-checkmark__check"
+                          }`}
+                          fill="none"
+                          d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                        />
+                      </svg>
+                    </span>
                   </div>
                   <div className="ConfirmOTP-Btns">
                     <button

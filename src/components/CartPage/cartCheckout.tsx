@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { PayPalButton } from "react-paypal-button-v2";
 import { Col, Row } from "reactstrap";
 import "./styles/Checkout.css";
 interface IProps {
@@ -60,9 +60,29 @@ export default class Checkout extends Component<IProps, IState> {
         />
         <Row>
           <Col md={{ size: 12, offset: 0 }} lg={{ size: 2, offset: 10 }}>
-            <Link to="/Checkout" className="cartCheckout-Btn">
-              Checkout
-            </Link>
+            <PayPalButton
+              amount="0.01"
+              style={{
+                layout: "vertical",
+                color: "black",
+                shape: "rect",
+                label: "checkout",
+              }}
+              // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+              onSuccess={(details, data) => {
+                alert(
+                  "Transaction completed by " + details.payer.name.given_name
+                );
+
+                // OPTIONAL: Call your server to save the transaction
+                return fetch("/paypal-transaction-complete", {
+                  method: "post",
+                  body: JSON.stringify({
+                    orderID: data.orderID,
+                  }),
+                });
+              }}
+            />
           </Col>
         </Row>
       </>

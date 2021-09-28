@@ -121,7 +121,7 @@
   display: flex;
   align-items: center;
 }
-.ProfileInfo-Agreement p {
+.ProfileInfo-Agreement {
   margin: 0 0 0 1rem;
   color: rgb(211, 0, 214);
   font-family: "Poppins-Bold";
@@ -315,7 +315,7 @@
   .ProfileInfo-Agreement {
     margin-bottom: 1.1rem;
   }
-  .ProfileInfo-Agreement p {
+  .ProfileInfo-Agreement {
     margin: 0 0 0 1rem;
     color: rgb(211, 0, 214);
     font-family: "Poppins-Bold";
@@ -351,7 +351,7 @@
   .ProfileInfo-Agreement {
     margin-top: 1.2rem;
   }
-  .ProfileInfo-Agreement p {
+  .ProfileInfo-Agreement {
     margin: 0 0 0 0.2rem;
     color: rgb(211, 0, 214);
     font-family: "Poppins-Bold";
@@ -438,7 +438,7 @@
     padding: 1rem 1rem 1rem 4rem !important;
   }
 
-  .ProfileInfo-Agreement p {
+  .ProfileInfo-Agreement {
     font-size: 0.8rem;
   }
   .ProfileInfo-Pic__Label {
@@ -471,7 +471,7 @@
     padding: 1.5rem;
     font-size: 1rem;
   }
-  .ProfileInfo-Agreement p {
+  .ProfileInfo-Agreement {
     font-size: 1rem;
     margin: 0 0 0 1rem;
   }

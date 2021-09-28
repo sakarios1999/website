@@ -7,7 +7,6 @@ import { Col, Container, Row } from "reactstrap";
 import styled from "styled-components";
 import ProfilePic from "../assets/Images/Profile-Placeholder.png";
 import TYCLogo from "../assets/SVGs/TYCLogo.svg";
-import history from "../history";
 import "./styles/WelcomePage.css";
 const Heart = styled(BsHeart)`
   transform: scale(6);
@@ -51,7 +50,7 @@ export default class WelcomePage extends Component {
               <Heart />
             </IconContext.Provider>
             <button
-              onClick={() => history.push("/Profile/EditInfo")}
+              onClick={() => (window.location.href = "/Profile/EditInfo")}
               className="Welcome-Continue__Btn"
             >
               Continue
