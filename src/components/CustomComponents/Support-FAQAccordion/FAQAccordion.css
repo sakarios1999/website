@@ -6,6 +6,7 @@
   font-family: "Poppins-Medium";
   src: url(../../../assets/Fonts/Poppins-Medium.ttf);
 }
+
 .FAQAccordion {
   margin: 2rem 0rem;
 }
@@ -97,6 +98,10 @@
 }
 .FAQAccordion-CardBody img {
   width: 100%;
+  border-radius: 5px;
+}
+.FAQAccordion-Button p {
+  margin: 0rem;
 }
 
 /* Extra small devices (phones, 600px and down) */

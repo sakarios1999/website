@@ -1,9 +1,8 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
-import { GoSignOut } from "react-icons/go";
 import { BiTransfer } from "react-icons/bi";
+import { GoSignOut } from "react-icons/go";
 import { ImStatsDots } from "react-icons/im";
-import { RiPriceTagFill } from "react-icons/ri";
 
 export const SidebarData = [
   {
@@ -16,12 +15,6 @@ export const SidebarData = [
     title: "User Transactions",
     path: "/Transactions",
     icon: <BiTransfer />,
-    cName: "Sidebar-text",
-  },
-  {
-    title: "Activate Tag",
-    path: "/ActivateTag",
-    icon: <RiPriceTagFill />,
     cName: "Sidebar-text",
   },
   {

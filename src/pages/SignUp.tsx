@@ -120,14 +120,7 @@ export default class SignUp extends Component {
                 <FaFacebookF />
                 Facebook
               </button>
-              <button className="SignUp-Social SignUp-twitter">
-                <FaTwitter />
-                Twitter
-              </button>
-              <button className="SignUp-Social SignUp-linkedIn">
-                <FaLinkedinIn />
-                LinkedIn
-              </button>
+
               <button className="SignUp-Social SignUp-Google">
                 <FcGoogle />
                 Google

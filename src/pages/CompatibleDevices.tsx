@@ -219,24 +219,23 @@ export default class TermsConditions extends Component {
             </p>
             <p className="CompatibleDevices-Title">OnePlus: </p>
             <p className="CompatibleDevices-text">
-              One, 3, 3T, 5, 5T, 6, 6T, 7, 7 Pro, 7 Pro 5G,
+              One, 3, 3T, 5, 5T, 6, 6T, 7, 7 Pro, 7 Pro 5G,{" "}
               <span>all future OnePlus phones</span>
             </p>
             <p className="CompatibleDevices-Title">Motorolla: </p>
             <p className="CompatibleDevices-text">
-              Moto P50, Moto X4, Moto Z3, Moto Z3 Play,
+              Moto P50, Moto X4, Moto Z3, Moto Z3 Play,{" "}
               <span>all future Motorolla phones</span>
             </p>
             <p className="CompatibleDevices-Title">Sony: </p>
             <p className="CompatibleDevices-text">
               Xperia XZ1/Compact, Xperia 1, 10/Plus, Xperia XA1/Ultra/Plus,
-              Xperia XZ2/Compact/Premium, Xperia XA2/Ultra/Plus, Xperia XZ3,
+              Xperia XZ2/Compact/Premium, Xperia XA2/Ultra/Plus, Xperia XZ3,{" "}
               <span>all future Sony phones</span>
             </p>
             <p className="CompatibleDevices-Title">Essential: </p>
             <p className="CompatibleDevices-text">
-              PH, PH-1,
-              <span>all future Essential phones</span>
+              PH, PH-1, <span>all future Essential phones</span>
             </p>
           </Col>
         </Row>

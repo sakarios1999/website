@@ -20,15 +20,18 @@ import RefundPolicy from "./pages/RefundPolicy";
 import Support from "./pages/Support";
 import TermsConditions from "./pages/Terms&Conditions";
 import WelcomePage from "./pages/WelcomePage";
+import ForgotPasswordContact from "./pages/ForgotPassword-Contact";
+import ForgotPasswordChange from "./pages/ForgotPassword-ChangePass";
+import ConstructionPage from "./pages/ConstructionPage";
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Router history={history}>
-          <Layout>
+          {/* <Layout>
             <Switch>
-              <Route
+               <Route
                 path="/Product/:id/:Category"
                 render={(propsRoute) => <Product {...propsRoute} />}
               />
@@ -49,6 +52,16 @@ class App extends React.Component {
               <Route exact path="/SignIn" render={() => <SignIn />} />
               <Route exact path="/SignUp" render={() => <SignUp />} />
               <Route exact path="/SignIn/OTP" render={() => <Otp />} />
+              <Route
+                exact
+                path="/ForgotPassword/Contact"
+                render={() => <ForgotPasswordContact />}
+              />
+              <Route
+                exact
+                path="/ForgotPassword/ChangePassword"
+                render={() => <ForgotPasswordChange />}
+              />
               <Route
                 exact
                 path="/Privacy-Policy"
@@ -75,9 +88,10 @@ class App extends React.Component {
                 path="/SignIn/ConfirmOTP"
                 render={() => <ConfirmOtp />}
               />
-              <Route exact path="/" render={() => <Home />} />
+              <Route exact path="/" render={() => <Home />} /> 
             </Switch>
-          </Layout>
+          </Layout> */}
+          <Route exact path="/" render={() => <ConstructionPage />} />
         </Router>
       </React.Fragment>
     );

@@ -15,7 +15,7 @@ const FAQAccordion = (props) => {
         onClick={toggle}
         style={{ marginBottom: "1rem" }}
       >
-        {props.title}
+        <p>{props.title}</p>
 
         <div
           className={`FAQAccordion-plus ${

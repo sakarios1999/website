@@ -68,7 +68,10 @@ export default class SignIn extends Component {
                       valid={false}
                     />
                   </div>
-                  <Link className="SignIn-ForgotPassword" to="/">
+                  <Link
+                    className="SignIn-ForgotPassword"
+                    to="/ForgotPassword/Contact"
+                  >
                     Forgot Password?
                   </Link>
                   <label className="SignIn-KeepMeSigned">
@@ -105,14 +108,7 @@ export default class SignIn extends Component {
                 <FaFacebookF />
                 Facebook
               </button>
-              <button className="SignIn-Social SignIn-twitter">
-                <FaTwitter />
-                Twitter
-              </button>
-              <button className="SignIn-Social SignIn-linkedIn">
-                <FaLinkedinIn />
-                LinkedIn
-              </button>
+
               <button className="SignIn-Social SignIn-Google">
                 <FcGoogle />
                 Google

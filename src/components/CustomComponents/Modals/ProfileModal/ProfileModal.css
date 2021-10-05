@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../../assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.ProfileModal-AddButton {
+  border-radius: 20px;
+  width: 8rem;
+  height: 8rem;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins-Medium";
+  transition: 1s;
+}
+.ProfileModal-AddButton:hover {
+  transform: scale(1.1);
+}
+
+.ProfileModal-ModalContent {
+  background-color: rgb(245, 245, 245) !important;
+  border: none !important;
+  font-family: "Poppins-SemiBold" !important;
+}
+
+.ProfileModal-CancelButton {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+}
+
+.ProfileModal-CancelButton:hover {
+  background-color: #5f666d;
+}
+.ProfileModal-ModalBody {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.ProfileModal-ProfileButton {
+  width: 100px;
+  height: 100px;
+
+  font-family: "Poppins-Regular";
+  border-radius: 10px;
+  border: none;
+  margin: 1rem;
+}
+.ProfileModal-ProfileButton:hover {
+  transform: scale(1.05);
+}
+
+.ProfileModal-ProfileButton__Social {
+  background-color: rgb(15, 15, 253);
+}
+.ProfileModal-ProfileButton__Contact {
+  background-color: rgb(245, 0, 0);
+}
+.ProfileModal-ProfileButton__Music {
+  background-color: rgb(164, 255, 28);
+}
+.ProfileModal-ProfileButton__Payment {
+  background-color: rgb(255, 175, 25);
+}
+.ProfileModal-ProfileButton__More {
+  background-color: rgb(228, 0, 228);
+}
+
+.ProfileModal-ModalBody__Groups {
+  max-height: 70vh;
+  overflow: scroll;
+}

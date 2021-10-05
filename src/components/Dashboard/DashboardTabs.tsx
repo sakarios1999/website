@@ -1,7 +1,10 @@
 import classnames from "classnames";
 import React, { useState } from "react";
-import { IconContext } from "react-icons";
-import { BsFillPlusSquareFill } from "react-icons/bs";
+import { AiOutlineMail, AiTwotonePhone } from "react-icons/ai";
+import { BiNetworkChart } from "react-icons/bi";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import { FaGlobeAmericas } from "react-icons/fa";
+import { MdLocationCity } from "react-icons/md";
 import {
   Col,
   Nav,
@@ -11,6 +14,7 @@ import {
   TabContent,
   TabPane,
 } from "reactstrap";
+import ProfileModal from "../CustomComponents/Modals/ProfileModal/ProfileModal";
 import "./styles/DashboardTabs.css";
 
 const DashboardTabs = (props) => {
@@ -62,30 +66,36 @@ const DashboardTabs = (props) => {
       </Nav>
       <TabContent className="DashboardTabs-TabContent" activeTab={activeTab}>
         <TabPane tabId="1">
-          <Row>
+          <Row className="DashboardTabs-SocialProfile">
             <Col xlg={3} lg={4} md={6} sm={12}>
-              <button className="DashboardTabs-AddButton">
-                <IconContext.Provider value={{ size: "100%" }}>
-                  <div>
-                    <BsFillPlusSquareFill />
-                  </div>
-                </IconContext.Provider>
-                Add Link
-              </button>
+              <ProfileModal />
             </Col>
           </Row>
         </TabPane>
         <TabPane tabId="2">
           <Row>
-            <Col xlg={3} lg={4} md={6} sm={12}>
-              <button className="DashboardTabs-AddButton">
-                <IconContext.Provider value={{ size: "100%" }}>
-                  <div>
-                    <BsFillPlusSquareFill />
-                  </div>
-                </IconContext.Provider>
-                Add Link
-              </button>
+            <Col className="p-0">
+              <div className="DashboardTabs-Business__Content">
+                <div className="DashboardTabs-Business__info">
+                  <BiNetworkChart /> Connections 88
+                </div>
+                <div className="DashboardTabs-Business__info">
+                  <BsFillBriefcaseFill /> The 400 Biscuits
+                </div>
+                <div className="DashboardTabs-Business__info">
+                  <AiTwotonePhone /> Nunaya-Nunaya Business
+                </div>
+                <div className="DashboardTabs-Business__info">
+                  <AiOutlineMail /> jbaini@tapyourchip.com
+                </div>
+                <div className="DashboardTabs-Business__info">
+                  <FaGlobeAmericas /> tapyourchip/jane-doe
+                </div>
+                <div className="DashboardTabs-Business__info">
+                  <MdLocationCity /> Miami, U.S
+                </div>
+              </div>
+              <h3>Media</h3>
             </Col>
           </Row>
         </TabPane>

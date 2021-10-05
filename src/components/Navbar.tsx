@@ -53,6 +53,9 @@ const NavbarComponent = (props: any) => {
     window.addEventListener("resize", () => {
       setIsMobile(window.innerWidth <= 766);
     });
+    document.addEventListener("mousedown", () => {
+      setSidebar(false);
+    });
   });
   const Facebook = styled(FaFacebookSquare)`
     color: #00457c;

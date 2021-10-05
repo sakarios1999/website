@@ -61,7 +61,17 @@
 .DashboardTabs-TabContent {
   display: flex !important;
   justify-content: center !important;
-  padding: 3rem;
+  padding: 0rem 0rem;
+  width: 100% !important;
+}
+.DashboardTabs-TabContent .tab-pane,
+.DashboardTabs-TabContent .tab-pane .row {
+  width: 100% !important;
+  margin: 0 !important;
+  margin-top: -1px !important;
+}
+.DashboardTabs-SocialProfile {
+  padding: 3rem !important;
 }
 .DashboardTabs-AddButton {
   border-radius: 20px;
@@ -74,6 +84,17 @@
 }
 .DashboardTabs-AddButton:hover {
   transform: scale(1.1);
+}
+.DashboardTabs-Business__Content {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: left !important;
+  background-color: #000;
+  padding: 3rem !important;
+}
+.DashboardTabs-Business__info {
+  color: #fff;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

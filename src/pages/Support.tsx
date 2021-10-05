@@ -48,7 +48,7 @@ export default class Support extends Component {
               height="70%"
               url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
             />
-            <p>How to pop an Android</p>
+            <p>How to tap an Android</p>
           </Col>
           <Col className="Support-VideoTutorial" md={3}>
             {" "}
@@ -149,9 +149,9 @@ export default class Support extends Component {
                     CardBody={
                       <>
                         <p>
-                          To pop to an iPhone 7, iPhone 8or iPhone X, you must
-                          use the NFC reader in their control center! See the
-                          image below for how to activate this:
+                          To tap an iPhone 7, iPhone 8or iPhone X, you must use
+                          the NFC reader in their control center! See the image
+                          below for how to activate this:
                         </p>
                         <img src={oldIPhone} />
                       </>
