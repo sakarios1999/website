@@ -54,7 +54,6 @@ export default class Otp extends Component<Props, State> {
         </Helmet>
         <Row>
           <Col className="OTP-Header" xs={12}>
-            <img className="OTP-Header__Img" src={TYCLogo} alt="TYC Logo" />
             <h3 className="OTP-Header__Title">SIGN IN WITH MOBILE NUMBER</h3>
           </Col>
         </Row>

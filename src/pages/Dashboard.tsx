@@ -7,12 +7,13 @@ import "./styles/Dashboard.css";
 
 interface State {
   Direct: boolean;
+  Profile: string;
 }
 interface Props {}
 export default class Dashboard extends Component<Props, State> {
   constructor(props) {
     super(props);
-    this.state = { Direct: false };
+    this.state = { Direct: false, Profile: "Both" };
     this.handleDirectSwitch = this.handleDirectSwitch.bind(this);
   }
   handleDirectSwitch() {
@@ -23,7 +24,10 @@ export default class Dashboard extends Component<Props, State> {
       <>
         <Container fluid className="Dashboard">
           <Row>
-            <Col xs={12} className="Dashboard-Header">
+            <Col
+              xs={6}
+              className="Dashboard-Header Dashboard-Header__ProfilePic"
+            >
               <img
                 className="Dashboard-ProfilePic"
                 src={ProfilePic}
@@ -31,6 +35,8 @@ export default class Dashboard extends Component<Props, State> {
               />
               <h3 className="Dashboard-Username">JDoe</h3>
               <p className="Dashboard-ProfileLink">tapyourchip.com/JDoe</p>
+            </Col>
+            <Col xs={6} className="Dashboard-Header Dashboard-Header__Btns">
               <button
                 className={`Dashboard-DirectSwitch ${
                   !this.state.Direct
@@ -40,6 +46,17 @@ export default class Dashboard extends Component<Props, State> {
                 onClick={this.handleDirectSwitch}
               >
                 {!this.state.Direct ? "DIRECT OFF" : "DIRECT ON"}
+              </button>
+              <button
+                className={`Dashboard-Profile ${
+                  this.state.Profile === "business"
+                    ? "Dashboard-Profile__business"
+                    : this.state.Profile === "social"
+                    ? "Dashboard-Profile__social"
+                    : "Dashboard-Profile__both"
+                }`}
+              >
+                Profile
               </button>
 
               <Link to="/Profile/EditInfo" className="Dashboard-EditProfile">

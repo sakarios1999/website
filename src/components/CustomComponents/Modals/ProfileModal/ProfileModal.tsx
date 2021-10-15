@@ -1,7 +1,20 @@
 import { useState } from "react";
 import { IconContext } from "react-icons";
 import { BsFillPlusSquareFill } from "react-icons/bs";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLink,
+  FaSnapchatGhost,
+  FaTwitter,
+} from "react-icons/fa";
+import { MdContactPhone, MdOutlineLibraryMusic } from "react-icons/md";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
+import ContactProfiles from "./Contact/ContactProfiles";
+import MoreProfiles from "./More/MoreProfiles";
+import MusicProfiles from "./Music/MusicProfiles";
+import PaymentsProfiles from "./Payments/PaymentsProfiles";
 import "./ProfileModal.css";
 import SocialMediaProfiles from "./SocialMedia/SocialMediaProfiles";
 const onSubmit = async (values) => {
@@ -44,12 +57,28 @@ const ProfileModal = (props) => {
           Add a Profile . . .
         </ModalHeader>
         <ModalBody className="ProfileModal-ModalContent ProfileModal-ModalBody">
-          <button
-            className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Social"
-            onClick={toggleSocialMedia}
-          >
-            Social Media
-          </button>
+          <div className="ProfileModal-Modal__ButtonContainer">
+            <button
+              className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Social"
+              onClick={toggleSocialMedia}
+            >
+              <div className="ProfileModal-ProfileButton__SocialLogo">
+                <IconContext.Provider value={{ size: "25px", color: "#fff" }}>
+                  <FaFacebookF />
+                </IconContext.Provider>{" "}
+                <IconContext.Provider value={{ size: "25px", color: "#fff" }}>
+                  <FaTwitter />
+                </IconContext.Provider>{" "}
+                <IconContext.Provider value={{ size: "25px", color: "#fff" }}>
+                  <FaInstagram />
+                </IconContext.Provider>{" "}
+                <IconContext.Provider value={{ size: "25px", color: "#fff" }}>
+                  <FaSnapchatGhost />
+                </IconContext.Provider>
+              </div>
+            </button>
+            <p>Social Media</p>
+          </div>
           <Modal isOpen={SocialMedia} toggle={toggleSocialMedia}>
             <ModalHeader>Choose a Social Media Profile . . .</ModalHeader>
             <ModalBody className="ProfileModal-ModalBody__Groups">
@@ -64,15 +93,22 @@ const ProfileModal = (props) => {
               </Button>
             </ModalFooter>
           </Modal>
-          <button
-            className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Contact"
-            onClick={toggleContact}
-          >
-            Contact
-          </button>
+          <div className="ProfileModal-Modal__ButtonContainer">
+            <button
+              className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Contact"
+              onClick={toggleContact}
+            >
+              <IconContext.Provider value={{ size: "50px", color: "#fff" }}>
+                <MdContactPhone />
+              </IconContext.Provider>
+            </button>{" "}
+            <p>Contact</p>
+          </div>
           <Modal isOpen={Contact} toggle={toggleContact}>
             <ModalHeader>Choose a Contact . . .</ModalHeader>
-            <ModalBody>Stuff and things</ModalBody>
+            <ModalBody>
+              <ContactProfiles />
+            </ModalBody>
             <ModalFooter>
               <Button
                 className="ProfileModal-CancelButton"
@@ -82,15 +118,23 @@ const ProfileModal = (props) => {
               </Button>
             </ModalFooter>
           </Modal>
-          <button
-            className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Music"
-            onClick={toggleMusic}
-          >
-            Music
-          </button>
+          <div className="ProfileModal-Modal__ButtonContainer">
+            <button
+              className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Music"
+              onClick={toggleMusic}
+            >
+              {" "}
+              <IconContext.Provider value={{ size: "50px", color: "#fff" }}>
+                <MdOutlineLibraryMusic />
+              </IconContext.Provider>
+            </button>
+            <p>Music</p>
+          </div>
           <Modal isOpen={Music} toggle={toggleMusic}>
             <ModalHeader>Choose a Music Profile . . .</ModalHeader>
-            <ModalBody>Stuff and things</ModalBody>
+            <ModalBody>
+              <MusicProfiles />
+            </ModalBody>
             <ModalFooter>
               <Button
                 className="ProfileModal-CancelButton"
@@ -100,15 +144,22 @@ const ProfileModal = (props) => {
               </Button>
             </ModalFooter>
           </Modal>
-          <button
-            className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Payment"
-            onClick={togglePayment}
-          >
-            Payment
-          </button>
+          <div className="ProfileModal-Modal__ButtonContainer">
+            <button
+              className="ProfileModal-ProfileButton ProfileModal-ProfileButton__Payment"
+              onClick={togglePayment}
+            >
+              <IconContext.Provider value={{ size: "50px", color: "#fff" }}>
+                <RiMoneyDollarCircleLine />
+              </IconContext.Provider>
+            </button>
+            <p>Payment</p>
+          </div>
           <Modal isOpen={Payment} toggle={togglePayment}>
             <ModalHeader>Choose a Payment Profile . . .</ModalHeader>
-            <ModalBody>Stuff and things</ModalBody>
+            <ModalBody>
+              <PaymentsProfiles />
+            </ModalBody>
             <ModalFooter>
               <Button
                 className="ProfileModal-CancelButton"
@@ -118,15 +169,23 @@ const ProfileModal = (props) => {
               </Button>
             </ModalFooter>
           </Modal>
-          <button
-            className="ProfileModal-ProfileButton ProfileModal-ProfileButton__More"
-            onClick={toggleMore}
-          >
-            More
-          </button>
+          <div className="ProfileModal-Modal__ButtonContainer">
+            <button
+              className="ProfileModal-ProfileButton ProfileModal-ProfileButton__More"
+              onClick={toggleMore}
+            >
+              {" "}
+              <IconContext.Provider value={{ size: "50px", color: "#fff" }}>
+                <FaLink />
+              </IconContext.Provider>
+            </button>
+            <p>More</p>
+          </div>
           <Modal isOpen={More} toggle={toggleMore}>
             <ModalHeader>More . . .</ModalHeader>
-            <ModalBody>Stuff and things</ModalBody>
+            <ModalBody>
+              <MoreProfiles />
+            </ModalBody>
             <ModalFooter>
               <Button
                 className="ProfileModal-CancelButton"

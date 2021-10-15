@@ -57,11 +57,6 @@ export default class ProfileInfo extends Component<Props, State> {
         </Helmet>
         <Row>
           <Col className="ProfileInfo-Header" xs={12}>
-            <img
-              className="ProfileInfo-Header__Img"
-              src={TYCLogo}
-              alt="TYC Logo"
-            />
             <h3 className="ProfileInfo-Header__Title">SETUP YOUR PROFILE</h3>
           </Col>
         </Row>
@@ -198,21 +193,6 @@ export default class ProfileInfo extends Component<Props, State> {
                     name="confirmPassword"
                     placeholder="Confirm Password"
                   />
-                  <label className="ProfileInfo-Agreement">
-                    <Field
-                      name="agreed"
-                      className="ProfileInfo-Agreement__checkbox"
-                      component="input"
-                      type="checkbox"
-                      value="agreed"
-                    />{" "}
-                    <Link
-                      to="/Terms&Conditions"
-                      className="ProfileInfo-Agreement"
-                    >
-                      I agree to the Terms & Conditions
-                    </Link>
-                  </label>
                   <div className="ProfileInfo-Btns">
                     <button
                       className="ProfileInfo-Btns__Submit"

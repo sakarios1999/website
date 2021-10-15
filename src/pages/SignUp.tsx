@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import { Field, Form } from "react-final-form";
 import { Helmet } from "react-helmet";
+import { IconContext } from "react-icons";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import { Link } from "react-router-dom";
 import { Col, Container, Row } from "reactstrap";
+import styled from "styled-components";
 import click from "../assets/SVGs/SignUp-ClickIcon.svg";
 import TYCLogo from "../assets/SVGs/TYCLogo.svg";
+import TermsAgreement from "../components/CustomComponents/Modals/TermsAgreementModal/TermsAggreement";
 import { FieldInput } from "../components/FormHelper/formhelper";
 import {
   composeValidators,
@@ -29,7 +32,11 @@ const PhoneAdapter = ({ input }) => (
     country="us"
   />
 );
-
+const Google = styled(FcGoogle)`
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 0.1rem;
+`;
 export default class SignUp extends Component {
   render() {
     return (
@@ -40,7 +47,6 @@ export default class SignUp extends Component {
         </Helmet>{" "}
         <Row>
           <Col className="SignUp-Header" xs={12}>
-            <img className="SignUp-Header__Img" src={TYCLogo} alt="TYC Logo" />
             <h3 className="SignUp-Header__Title">SIGN UP</h3>
           </Col>
         </Row>
@@ -96,6 +102,16 @@ export default class SignUp extends Component {
                       validate={composeValidators(required)}
                     />
                   </div>
+                  <label className="SignUp-Agreement">
+                    <Field
+                      name="agreed"
+                      className="SignUp-Agreement__checkbox"
+                      component="input"
+                      type="checkbox"
+                      value="agreed"
+                    />{" "}
+                    <TermsAgreement />
+                  </label>
                   <div className="SignUp-Btns">
                     <button
                       className="SignUp-Btns__Submit"
@@ -122,7 +138,11 @@ export default class SignUp extends Component {
               </button>
 
               <button className="SignUp-Social SignUp-Google">
-                <FcGoogle />
+                <IconContext.Provider value={{ size: "20px" }}>
+                  <div>
+                    <Google />
+                  </div>
+                </IconContext.Provider>
                 Google
               </button>
             </div>

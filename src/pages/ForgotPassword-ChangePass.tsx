@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import { Field, Form } from "react-final-form";
 import { Helmet } from "react-helmet";
-import { IconContext } from "react-icons";
-import { BsPhone } from "react-icons/bs";
 import { Col, Container, Row } from "reactstrap";
-import styled from "styled-components";
-import TYCLogo from "../assets/SVGs/TYCLogo.svg";
 import { FieldInput } from "../components/FormHelper/formhelper";
 import {
   composeValidators,
   required,
 } from "../components/FormHelper/validtionhelper";
 import "./styles/ForgotPassword-Change.css";
+
 interface State {
   submitted: boolean;
 }
@@ -23,11 +20,6 @@ const onSubmit = async (values) => {
   }, 1100);
 };
 
-const Phone = styled(BsPhone)`
-  margin: 10rem 0rem;
-  transform: scale(8);
-  transition: color 1s;
-`;
 export default class ForgotPasswordChange extends Component<Props, State> {
   constructor(props) {
     super(props);
@@ -44,13 +36,8 @@ export default class ForgotPasswordChange extends Component<Props, State> {
         </Helmet>
         <Row>
           <Col className="ForgotPasswordChange-Header" xs={12}>
-            <img
-              className="ForgotPasswordChange-Header__Img"
-              src={TYCLogo}
-              alt="TYC Logo"
-            />
             <h3 className="ForgotPasswordChange-Header__Title">
-              SIGN IN WITH MOBILE NUMBER
+              Reset Password
             </h3>
           </Col>
         </Row>
@@ -58,9 +45,7 @@ export default class ForgotPasswordChange extends Component<Props, State> {
           <Col xs={12}>
             <Form
               onSubmit={onSubmit}
-              initialValues={{
-                mobile: "",
-              }}
+              initialValues={{}}
               noValidate
               render={({ handleSubmit, values }) => (
                 <form
@@ -89,21 +74,7 @@ export default class ForgotPasswordChange extends Component<Props, State> {
                       validate={composeValidators(required)}
                     />
                   </div>
-                  <IconContext.Provider
-                    value={{
-                      color: `${this.state.submitted ? "#a200a5" : "#8da2af"}`,
-                      size: "25px",
-                    }}
-                  >
-                    <div>
-                      <Phone />
-                    </div>
-                  </IconContext.Provider>
-                  <div
-                    className={`ForgotPasswordChange-check ${
-                      this.state.submitted && "OTP-check__animate"
-                    }`}
-                  ></div>
+
                   <div className="ForgotPasswordChange-Btns">
                     <button
                       className={`ForgotPasswordChange-Btns__Submit ${

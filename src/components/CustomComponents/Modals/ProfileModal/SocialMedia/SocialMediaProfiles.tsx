@@ -55,7 +55,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Snapchat"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#FFFC00" }}>
             <FaSnapchatSquare />
           </IconContext.Provider>
         }
@@ -63,7 +63,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Twitter"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#1DA1F2" }}>
             <FaTwitter />
           </IconContext.Provider>
         }
@@ -71,7 +71,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Linkedin"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#0077b5" }}>
             <FaLinkedinIn />
           </IconContext.Provider>
         }
@@ -79,7 +79,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Youtube"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#FF0000" }}>
             <FaYoutube />
           </IconContext.Provider>
         }
@@ -87,7 +87,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Twitch"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#6441A4" }}>
             <FaTwitch />
           </IconContext.Provider>
         }
@@ -95,7 +95,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Pinterest"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#E60023" }}>
             <FaPinterest />
           </IconContext.Provider>
         }
@@ -103,7 +103,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Tiktok"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#000" }}>
             <SiTiktok />
           </IconContext.Provider>
         }
@@ -111,7 +111,7 @@ const SocialMediaProfiles = (props) => {
       <AddLinkModal
         buttonTitle="Onlyfans"
         buttonLogo={
-          <IconContext.Provider value={{ size: "50px", color: "#3b5998" }}>
+          <IconContext.Provider value={{ size: "50px", color: "#00AFF0" }}>
             <SiOnlyfans />
           </IconContext.Provider>
         }

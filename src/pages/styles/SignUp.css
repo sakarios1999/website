@@ -103,7 +103,7 @@
   width: 100%;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -113,42 +113,45 @@
 }
 
 .SignUp-facebook {
-  background-color: #3b5998;
-  color: #fff;
-  border: 1px solid #3b5998;
-}
-.SignUp-facebook:hover {
   background-color: #fff;
   color: #3b5998;
   text-decoration: none;
 }
-.SignUp-linkedIn {
-  background-color: #0e76a8;
+.SignUp-facebook:hover {
+  background-color: #3b5998;
   color: #fff;
-  border: 1px solid #0e76a8;
 }
-.SignUp-linkedIn:hover {
-  background-color: #fff;
-  color: #0e76a8;
-  text-decoration: none;
-}
-.SignUp-twitter {
-  background-color: #1da1f2;
-  color: #fff;
-  border: 1px solid #1da1f2;
-}
-.SignUp-twitter:hover {
-  background-color: #fff;
-  color: #1da1f2;
-  text-decoration: none;
-}
+
 .SignUp-Google {
   background-color: #fff;
 }
 .SignUp-Google:hover {
-  border-color: transparent;
-  background: linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335);
+  background-color: #4285f4;
   color: #fff;
+}
+.SignUp-Agreement {
+  display: flex;
+  align-items: center;
+}
+.SignUp-Agreement {
+  margin: 0 0 0 1rem;
+  color: rgb(211, 0, 214);
+  font-family: "Poppins-Bold";
+}
+.SignUp-Agreement__checkbox {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: white;
+  border-radius: 50px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.SignUp-Agreement__checkbox:checked {
+  background-color: gray;
 }
 @keyframes animate-Click {
   0% {
@@ -217,6 +220,12 @@
   .SignUp-Img {
     display: none;
   }
+  .SignUp-Agreement {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -264,6 +273,12 @@
   .SignUp-Separator {
     margin: 0rem 0rem 2rem;
   }
+  .SignUp-Agreement {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -297,6 +312,19 @@
   .SignUp-Img__Click {
     width: 12rem;
   }
+
+  .SignUp-Agreement__checkbox {
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 50px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -326,6 +354,9 @@
   .SignUp-Img__Click {
     width: 15rem;
   }
+  .SignUp-Agreement {
+    font-size: 0.9rem;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -353,5 +384,9 @@
 
   .SignUp-Img__Click {
     width: 15rem;
+  }
+  .SignUp-Agreement {
+    font-size: 1rem;
+    margin: 0 0 0 1rem;
   }
 }

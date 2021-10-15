@@ -12,6 +12,7 @@
   font-family: "Poppins-Light";
   margin: 0rem;
   padding: 4rem 0rem 10rem;
+  position: relative;
 }
 
 .Footer-Main {
@@ -25,7 +26,20 @@
   width: 5rem;
   margin-top: 4rem;
 }
-
+.Footer-Contributions {
+  position: absolute;
+  color: #fff;
+  bottom: 10px;
+  left: 30px;
+  font-size: 11px;
+}
+.Footer-Contributions p {
+  margin: 0rem;
+}
+.Footer-DELogo {
+  width: 90px;
+  margin-left: -10px;
+}
 .Footer-Address {
   color: #fff;
   margin-top: 2rem;
@@ -80,10 +94,11 @@
 
 .Footer-Store__Links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 7rem;
   justify-content: space-evenly;
   margin-top: 2rem;
+  width: 120px;
 }
 
 .Footer-Store__Btns {

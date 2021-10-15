@@ -6,11 +6,16 @@
   font-family: "Poppins-Light";
   src: url(../../assets/Fonts/Poppins-Light.ttf);
 }
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../assets/Fonts/Poppins-Medium.ttf);
+}
 .Support {
   padding: 4rem 2rem;
 }
 .Support-innerAccordion {
   font-size: 1rem !important;
+  font-family: "Poppins-Medium" !important;
 }
 .Support-innerAccordion__Card {
   box-shadow: none !important;
