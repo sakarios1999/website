@@ -1,29 +1,22 @@
-import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import "./TermsAgreement.css";
+import React, { Component } from "react";
+import { Col, Container, Row } from "reactstrap";
+import "./styles/Terms&Conditions.css";
+import { Helmet } from "react-helmet";
 
-const TermsAgreement = (props) => {
-  const { buttonLabel, className } = props;
-
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
-
-  return (
-    <div>
-      <Button className="TermsAgreement-Button" onClick={toggle}>
-        I aggree to the terms and conditions
-      </Button>
-      <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader className="TermsAgreement-Header" toggle={toggle}>
-          Terms & Conditions
-        </ModalHeader>
-        <ModalBody className="TermsAgreement-ModalBody">
-          <div>
-            <p className="TermsAgreement-Title">
+export default class TermsConditions extends Component {
+  render() {
+    return (
+      <Container fluid className="TermsConditions">
+        <Helmet>
+          <title>TYC - Terms & Conditions</title>
+        </Helmet>
+        <Row>
+          <Col xs={12}>
+            <h1>Terms & Conditions</h1>
+            <p className="TermsConditions-Title">
               Terms and Conditions Agreement between User and TYC.com
             </p>
-            <p className="TermsAgreement-text">
+            <p className="TermsConditions-text">
               Welcome to TYC.com. The TYC.com website (the "Site") is comprised
               of various web pages operated by TYC Co ("TYC"). TYC.com is
               offered to you conditioned on your acceptance without modification
@@ -45,8 +38,8 @@ const TermsAgreement = (props) => {
               requirement that such communications be in writing.
             </p>
 
-            <p className="TermsAgreement-Title">Your Account</p>
-            <p className="TermsAgreement-text">
+            <p className="TermsConditions-Title">Your Account</p>
+            <p className="TermsConditions-text">
               If you use this site, you are responsible for maintaining the
               confidentiality of your account and password and for restricting
               access to your computer, and you agree to accept responsibility
@@ -108,7 +101,7 @@ const TermsAgreement = (props) => {
               or our licensors except as expressly authorized by these Terms.
             </p>
 
-            <p className="TermsAgreement-text">
+            <p className="TermsConditions-text">
               Third Party Accounts You will be able to connect your TYC account
               to third party accounts. By connecting your TYC account to your
               third party account, you acknowledge and agree that you are
@@ -159,7 +152,7 @@ const TermsAgreement = (props) => {
               termination of these Terms and Conditions.
             </p>
 
-            <p className="TermsAgreement-text">
+            <p className="TermsConditions-text">
               Class Action Waiver Any arbitration under these Terms and
               Conditions will take place on an individual basis; class
               arbitrations and class/representative/collective actions are not
@@ -206,7 +199,7 @@ const TermsAgreement = (props) => {
               PORTION OF THE SITE, OR WITH ANY OF THESE TERMS OF USE, YOUR SOLE
               AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE SITE.
             </p>
-            <p className="TermsAgreement-text">
+            <p className="TermsConditions-text">
               Terms of Use Terms and Conditions Agreement between User, and
               TYC.com Welcome to TYC.com. The TYC.com website (the "Site") is
               comprised of various web pages operated by TYC Co ("TYC"). TYC.com
@@ -421,20 +414,17 @@ const TermsAgreement = (props) => {
               versions. TYC encourages you to periodically review the Terms to
               stay informed of our updates.
             </p>
-            <p className="TermsAgreement-text">
+            <p className="TermsConditions-text">
               TYC welcomes your questions or comments regarding the Terms:
             </p>
-            <p className="TermsAgreement-text">
+            <p className="TermsConditions-text">
               TYC Co PO Box 12345 San Diego, CA 11354 Email Address:
               info@tapyourchip.com Telephone number: 858.449.8059 Effective as
               of September 16, 2021
             </p>
-          </div>
-        </ModalBody>
-        <ModalFooter className="TermsAgreement-Footer"> </ModalFooter>
-      </Modal>
-    </div>
-  );
-};
-
-export default TermsAgreement;
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}

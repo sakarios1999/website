@@ -6,7 +6,6 @@ import { BsPhone } from "react-icons/bs";
 import { Col, Container, Row } from "reactstrap";
 import styled from "styled-components";
 import TYCLogo from "../assets/SVGs/TYCLogo.svg";
-import MailBox from "../components/CustomComponents/DesignComponents/MailBox/MailBox";
 import { FieldInput } from "../components/FormHelper/formhelper";
 import {
   composeValidators,
@@ -15,12 +14,10 @@ import {
 import "./styles/ForgotPassword-Contact.css";
 interface State {
   submitted: boolean;
-  toggleAnimation: boolean;
 }
 interface Props {}
 const onSubmit = async (values) => {
   console.log(JSON.stringify(values));
-
   setTimeout(() => {
     window.location.href = "/ForgotPassword/ChangePassword";
   }, 1100);
@@ -36,7 +33,6 @@ export default class ForgotPasswordContact extends Component<Props, State> {
     super(props);
     this.state = {
       submitted: false,
-      toggleAnimation: false,
     };
   }
 
@@ -48,8 +44,13 @@ export default class ForgotPasswordContact extends Component<Props, State> {
         </Helmet>
         <Row>
           <Col className="ForgotPasswordContact-Header" xs={12}>
+            <img
+              className="ForgotPasswordContact-Header__Img"
+              src={TYCLogo}
+              alt="TYC Logo"
+            />
             <h3 className="ForgotPasswordContact-Header__Title">
-              Enter your Email to reset password
+              SIGN IN WITH MOBILE NUMBER
             </h3>
           </Col>
         </Row>
@@ -77,10 +78,16 @@ export default class ForgotPasswordContact extends Component<Props, State> {
                       validate={composeValidators(required)}
                     />
                   </div>
-                  <div className="ForgotPasswordContact-MailBox">
-                    <MailBox toggle={this.state.toggleAnimation} />
-                  </div>
-
+                  <IconContext.Provider
+                    value={{
+                      color: `${this.state.submitted ? "#a200a5" : "#8da2af"}`,
+                      size: "25px",
+                    }}
+                  >
+                    <div>
+                      <Phone />
+                    </div>
+                  </IconContext.Provider>
                   <div
                     className={`ForgotPasswordContact-check ${
                       this.state.submitted && "OTP-check__animate"
@@ -100,10 +107,7 @@ export default class ForgotPasswordContact extends Component<Props, State> {
                           : false
                       }
                       onClick={() => {
-                        this.setState({
-                          submitted: true,
-                          toggleAnimation: !this.state.toggleAnimation,
-                        });
+                        this.setState({ submitted: true });
                       }}
                     >
                       Continue

@@ -22,6 +22,7 @@ export default class WelcomePage extends Component {
         </Helmet>
         <Row>
           <Col className="Welcome-Header" xs={12}>
+            <img className="Welcome-Header__Img" src={TYCLogo} alt="TYC Logo" />
             <h3 className="Welcome-Header__Title">Welcome Back</h3>
           </Col>
         </Row>

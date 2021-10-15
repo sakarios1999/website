@@ -7,7 +7,6 @@ import styled from "styled-components";
 import AppleLogo from "../assets/SVGs/AppleLogo.svg";
 import GoogleLogo from "../assets/SVGs/GooglePlayLogo.svg";
 import TYCLogo from "../assets/SVGs/TYCLogo-Footer.svg";
-import DELogo from "../assets/Images/DE-Logo.png";
 import "./Footer.css";
 
 export default class Footer extends Component {
@@ -172,11 +171,6 @@ export default class Footer extends Component {
               </IconContext.Provider>
             </NavLink>
           </Col>
-        </Row>
-        <Row className="Footer-Contributions">
-          <p>
-            Developed by <img className="Footer-DELogo" src={DELogo} />
-          </p>
         </Row>
       </Container>
     );

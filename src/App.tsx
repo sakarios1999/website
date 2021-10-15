@@ -9,27 +9,29 @@ import Checkout from "./pages/Checkout";
 import CompatibleDevices from "./pages/CompatibleDevices";
 import ConfirmOtp from "./pages/ConfirmOtp";
 import Dashboard from "./pages/Dashboard";
-import ForgotPasswordChange from "./pages/ForgotPassword-ChangePass";
-import ForgotPasswordContact from "./pages/ForgotPassword-Contact";
 import Home from "./pages/Home";
 import Otp from "./pages/Otp";
 import PrivacyPolicies from "./pages/PrivacyPolicies";
 import ProfileInfo from "./pages/ProfileInfo";
-import RefundPolicy from "./pages/RefundPolicy";
 import Shop from "./pages/Shop";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import RefundPolicy from "./pages/RefundPolicy";
 import Support from "./pages/Support";
+import TermsConditions from "./pages/Terms&Conditions";
 import WelcomePage from "./pages/WelcomePage";
+import ForgotPasswordContact from "./pages/ForgotPassword-Contact";
+import ForgotPasswordChange from "./pages/ForgotPassword-ChangePass";
+import ConstructionPage from "./pages/ConstructionPage";
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Router history={history}>
-          <Layout>
+          {/* <Layout>
             <Switch>
-              <Route
+               <Route
                 path="/Product/:id/:Category"
                 render={(propsRoute) => <Product {...propsRoute} />}
               />
@@ -65,7 +67,11 @@ class App extends React.Component {
                 path="/Privacy-Policy"
                 render={() => <PrivacyPolicies />}
               />
-
+              <Route
+                exact
+                path="/Terms&Conditions"
+                render={() => <TermsConditions />}
+              />
               <Route exact path="/Welcome" render={() => <WelcomePage />} />
               <Route
                 exact
@@ -82,10 +88,10 @@ class App extends React.Component {
                 path="/SignIn/ConfirmOTP"
                 render={() => <ConfirmOtp />}
               />
-              <Route exact path="/" render={() => <Home />} />
+              <Route exact path="/" render={() => <Home />} /> 
             </Switch>
-          </Layout>
-          {/* <Route exact path="/" render={() => <ConstructionPage />} /> */}
+          </Layout> */}
+          <Route exact path="/" render={() => <ConstructionPage />} />
         </Router>
       </React.Fragment>
     );

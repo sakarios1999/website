@@ -44,6 +44,11 @@ export default class ConfirmOtp extends Component<Props, State> {
         </Helmet>
         <Row>
           <Col className="ConfirmOTP-Header" xs={12}>
+            <img
+              className="ConfirmOTP-Header__Img"
+              src={TYCLogo}
+              alt="TYC Logo"
+            />
             <h3 className="ConfirmOTP-Header__Title">
               MOBILE NUMBER CONFIRMATION
             </h3>

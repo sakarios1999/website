@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { Field, Form } from "react-final-form";
 import { Helmet } from "react-helmet";
-import { IconContext } from "react-icons";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { Col, Container, Row } from "reactstrap";
-import styled from "styled-components";
 import Lock from "../assets/SVGs/SignIn-LockIcon.svg";
 import Stars from "../assets/SVGs/SignIn-Stars.svg";
+import TYCLogo from "../assets/SVGs/TYCLogo.svg";
 import { FieldInput } from "../components/FormHelper/formhelper";
 import {
   composeValidators,
@@ -20,11 +19,6 @@ const onSubmit = async (values) => {
   console.log(JSON.stringify(values));
   window.location.href = "/Profile/Dashboard";
 };
-const Google = styled(FcGoogle)`
-  background-color: #fff;
-  border-radius: 50px;
-  padding: 0.1rem;
-`;
 export default class SignIn extends Component {
   render() {
     return (
@@ -34,6 +28,7 @@ export default class SignIn extends Component {
         </Helmet>
         <Row>
           <Col className="SignIn-Header" xs={12}>
+            <img className="SignIn-Header__Img" src={TYCLogo} alt="TYC Logo" />
             <h3 className="SignIn-Header__Title">SIGN IN</h3>
           </Col>
         </Row>
@@ -104,9 +99,9 @@ export default class SignIn extends Component {
               )}
             />
             <div className="SignIn-Separator">
-              <span className="SignIn-Separator__left"></span>
+              <span></span>
               <p>or sign in with</p>
-              <span className="SignIn-Separator__right"></span>
+              <span></span>
             </div>
             <div className="SignIn-SocialMedia">
               <button className="SignIn-Social SignIn-facebook">
@@ -115,11 +110,7 @@ export default class SignIn extends Component {
               </button>
 
               <button className="SignIn-Social SignIn-Google">
-                <IconContext.Provider value={{ size: "20px" }}>
-                  <div>
-                    <Google />
-                  </div>
-                </IconContext.Provider>
+                <FcGoogle />
                 Google
               </button>
             </div>
